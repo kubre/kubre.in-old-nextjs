@@ -4,11 +4,10 @@
 - Next.js
 - tailwindcss
 
-
 ## Features
 - [x] Homepage
 - [x] Desktop Homepage
-- [] Pull out components
+- [x] Pull out into components
 - [] Resume (Link to the resume)
 - [] Portfolio (Find a better way to show this)
 - [] Blog (Simple MDX blog maybe?)
