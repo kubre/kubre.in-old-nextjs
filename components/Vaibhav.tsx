@@ -8,17 +8,14 @@ const Vaibhav = () => {
           width={200}
           height={200}
           layout="responsive"
-          className="rounded-full"
+          className="rounded-full invert"
+          // style={{ filter: "invert(95%)" }}
           src="/images/me.jpg"
           alt="My avatar picture"
         />
       </div>
       <h1 className="text-2xl font-bold mt-4">Vaibhav Kubre</h1>
       <h2>(Fullstack Engineer)</h2>
-      <p className="text-slate-300 mt-4 w-80 mx-auto">
-        Worked as Freelancer from 2017 till end of 2021, Now working as
-        Fullstack Engineer.
-      </p>
     </section>
   );
 };
