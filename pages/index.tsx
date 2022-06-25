@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import HomeAvatar from "../components/HomeAvatar";
-import SocialIcons from "../components/SocialIcons";
+import Vaibhav from "../components/Vaibhav";
+import SocialMedia from "../components/SocialMedia";
 
 const Home: NextPage = () => {
   return (
@@ -15,20 +15,16 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col h-full">
-        <div className="flex flex-col md:flex-row h-full pt-8 md:pt-16">
-          <section className="w-full md:w-1/2">
-           <div className="flex flex-col gap-y-8 max-w-screen-sm mx-auto">
-            <HomeAvatar />
-            <SocialIcons />
-           </div>
-          </section>
-          <section className="mt-8 md:mt-0 h-full w-full md:w-1/2">
-            <h1 className="text-center font-bold text-xl">
-              Recentally Published
-            </h1>
-          </section>
+      <main className="block md:grid md:grid-cols-2 pt-8 mx-auto">
+        <div>
+          <Vaibhav />
+          <SocialMedia />
         </div>
+        <section className="mt-8 md:mt-0">
+          <h1 className="text-center font-bold text-xl">
+            Recentally Published
+          </h1>
+        </section>
       </main>
     </>
   );

@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-const HomeAvatar = () => {
+const Vaibhav = () => {
   return (
-    <section className="flex flex-col px-16 text-center">
-      <div className="h-64 w-64 md:h-72 md:w-72 mx-auto">
+    <section className="px-8 text-center">
+      <div className="h-48 w-48 md:h-64 md:w-64 mx-auto">
         <Image
           width={200}
           height={200}
@@ -23,4 +23,4 @@ const HomeAvatar = () => {
   );
 };
 
-export default HomeAvatar;
+export default Vaibhav;

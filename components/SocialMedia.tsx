@@ -1,6 +1,6 @@
-const SocialIcons = () => {
+const SocialMedia = () => {
   return (
-    <section className="flex justify-around px-16 md:px-24">
+    <section className="flex justify-around px-16 max-w-md mx-auto md:px-24 mt-4 md:mt-8">
       <a
         target="_blank"
         rel="noreferrer"
@@ -50,4 +50,4 @@ const SocialIcons = () => {
   );
 };
 
-export default SocialIcons;
+export default SocialMedia;
