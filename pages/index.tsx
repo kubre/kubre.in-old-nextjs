@@ -1,12 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import HomeAvatar from "../components/HomeAvatar";
-import Navbar from "../components/Navbar";
 import SocialIcons from "../components/SocialIcons";
 
 const Home: NextPage = () => {
   return (
-    <div className="h-auto md:h-screen">
+    <>
       <Head>
         <title>Vaibhav Kubre</title>
         <meta
@@ -17,7 +16,6 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="flex flex-col h-full">
-        <Navbar />
         <div className="flex flex-col md:flex-row h-full pt-8 md:pt-16">
           <section className="w-full md:w-1/2">
            <div className="flex flex-col gap-y-8 max-w-screen-sm mx-auto">
@@ -32,7 +30,7 @@ const Home: NextPage = () => {
           </section>
         </div>
       </main>
-    </div>
+    </>
   );
 };
 

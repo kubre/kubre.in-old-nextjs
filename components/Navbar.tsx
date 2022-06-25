@@ -3,10 +3,9 @@ import { useRouter } from "next/router";
 
 const Navbar = () => {
   return (
-    <nav className="py-4 flex text-center justify-around md:justify-end px-8 gap-x-2 md:gap-x-8">
-      <NavItem title="Home" href="/" />
+    <nav className="py-4 flex text-center justify-center px-8 gap-x-2 md:gap-x-8">
+      <NavItem title="Blog" href="/" />
       <NavItem title="Portfolio" href="/portfolio" />
-      <NavItem title="Blog" href="/blog" />
     </nav>
   );
 };
