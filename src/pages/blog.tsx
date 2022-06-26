@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Vaibhav from "../components/Vaibhav";
-import SocialMedia from "../components/SocialMedia";
+import Vaibhav from "@/components/Vaibhav";
+import SocialMedia from "@/components/SocialMedia";
 
 const Blog = () => {
   return (

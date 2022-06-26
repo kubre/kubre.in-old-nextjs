@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Vaibhav from "../components/Vaibhav";
-import SocialMedia from "../components/SocialMedia";
+import Vaibhav from "@/components/Vaibhav";
+import SocialMedia from "@/components/SocialMedia";
 
 const Home: NextPage = () => {
   const FullstackDiv = (

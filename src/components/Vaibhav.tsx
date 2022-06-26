@@ -9,7 +9,6 @@ const Vaibhav = () => {
           height={200}
           layout="responsive"
           className="rounded-full invert"
-          // style={{ filter: "invert(95%)" }}
           src="/images/me.jpg"
           alt="My avatar picture"
         />

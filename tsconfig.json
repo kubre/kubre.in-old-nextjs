@@ -15,8 +15,17 @@
     "jsx": "preserve",
     "noUncheckedIndexedAccess": true,
     "incremental": false,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "src/types",
+    "node_modules"
+  ]
 }
