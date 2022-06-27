@@ -37,6 +37,7 @@ const Home: NextPage = () => {
       </p>
     </div>
   );
+
   return (
     <>
       <Head>
