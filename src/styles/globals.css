@@ -8,3 +8,15 @@ body {
   font-family: 'Open Sans', sans-serif;
   @apply bg-slate-900 text-slate-50;
 }
+
+.linked-heading a {
+  @apply flex items-center;
+}
+
+.linked-heading .linked-heading-icon {
+  @apply hidden;
+}
+
+.linked-heading:hover .linked-heading-icon {
+  @apply inline;
+}
