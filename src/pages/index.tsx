@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   const FullstackDiv = (
     <div>
       <h2 className="font-bold text-xl">
-        FullStack Engineer at{" "}
+        👨‍💻 FullStack Engineer at{" "}
         <a target="_blank" rel="noreferrer" href="https://www.hellotars.com/">
           TARS
         </a>
@@ -22,7 +22,7 @@ const Home: NextPage = () => {
 
   const FreelancerDiv = (
     <div className="mt-2">
-      <h2 className="font-bold text-xl">Freelancer</h2>
+      <h2 className="font-bold text-xl">⌨ Freelancer</h2>
       <p className="text-sm mt-1">(Jun 2017 - Dec 2021)</p>
       <p className="pl-4 mt-2 text-slate-300">
         Worked as Freelnacer making websites and mobile apps, alongside being a

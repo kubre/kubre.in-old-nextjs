@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import { MDXProvider } from "@mdx-js/react";
 
 import { PostMeta } from "@/types";
@@ -32,11 +31,8 @@ const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
             <h1 className="pb-4 pt-8 text-4xl md:text-6xl font-bold">
               {meta.title}
             </h1>
-            <div className="text-slate-400">
-              <span className="gap-x-1 text-sm">
-                <span>📝 Publshed at: </span>
-                <span>{meta.published_at.toLocaleDateString()}</span>
-              </span>
+            <div className="text-slate-400 py-2">
+              📝 {meta.published_at.toLocaleDateString()}
             </div>
             <div className="py-8">{children}</div>
           </div>
