@@ -1,0 +1,19 @@
+import PostLayout from "@/components/PostLayout";
+import { PostMeta } from "@/types";
+
+<div className="py-8 border border-b-2 border-white">
+![Image for JavaScript to TypeScript](/images/from-javascript-to-typescript-in-5-minutes.png)
+</div>
+
+## Overview
+
+You heard the greatness of TypeScript. Maybe stumbled on it. Maybe you saw job posting 
+for typescript developer. You're thinking is it a good idea to learn a new language
+
+
+export default ({ children }) => <PostLayout meta={{
+  title: "⏰ From Javascript to TypeScript in 5 Minutes",
+  description: "",
+  published_at: new Date("27 Jun 2022"),
+  keywords: ["javascript", "typescript", "leanring"]
+}}>{children}</PostLayout>;

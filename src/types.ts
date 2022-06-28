@@ -3,7 +3,6 @@ export interface PostMeta {
   description: string,
   title: string,
   keywords: string[],
-  image: string,
-  modified_at: Date,
   published_at: Date,
+  modified_at?: Date,
 };

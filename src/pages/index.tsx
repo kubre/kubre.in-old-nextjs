@@ -54,12 +54,12 @@ const Home: NextPage = () => {
           <Vaibhav />
           <SocialMedia />
         </div>
-        <section className="pt-8 max-w-md flex justify-center items-center">
+        <div className="pt-8 max-w-md flex justify-center items-center">
           <div className="grid gap-y-4 px-8">
             {FullstackDiv}
             {FreelancerDiv}
           </div>
-        </section>
+        </div>
       </main>
     </>
   );

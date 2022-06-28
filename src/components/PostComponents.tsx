@@ -1,20 +1,36 @@
 import Image from "next/image";
 
 export const img = (props: any) => (
-  <Image alt={props.alt} layout="responsive" {...props} />
+  <Image
+    height={220}
+    width={768}
+    alt={props.alt}
+    layout="responsive"
+    src={props.src}
+  />
 );
+
 export const h1 = (props: any) => (
-  <h1 className="text-2xl font-bold mt-4">{props.children}</h1>
+  <h1 className="text-4xl md:text-6xl font-bold py-2">{props.children}</h1>
 );
+
 export const h2 = (props: any) => (
-  <h2 className="text-xl font-bold mt-4">{props.children}</h2>
+  <h2
+    id={props?.children?.toLowerCase?.()?.replaceAll?.(" ", "-")}
+    className="text-3xl md:text-5xl font-bold py-2"
+  >
+    {props.children}
+  </h2>
 );
+
 export const p = (props: any) => (
-  <p className="text-sm mt-1">{props.children}</p>
+  <p className="my-2 leading-relaxed text-lg">{props.children}</p>
 );
+
 export const pre = (props: any) => (
-  <pre className="text-sm mt-1">{props.children}</pre>
+  <pre className="my-2 leading-relaxed text-lg">{props.children}</pre>
 );
+
 export const code = (props: any) => (
-  <code className="text-sm mt-1">{props.children}</code>
+  <code className="my-2 leading-relaxed text-lg">{props.children}</code>
 );

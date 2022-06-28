@@ -15,9 +15,9 @@ const Blog = () => {
           <Vaibhav />
           <SocialMedia />
         </div>
-        <section className="order-1 md:order-2 w-full max-w-md px-8">
+        <div className="order-1 md:order-2 w-full max-w-md px-8">
           No Posts yet...
-        </section>
+        </div>
       </main>
     </>
   );
