@@ -21,7 +21,7 @@ export const h2 = (props: any) => {
   return (
     <h2
       id={anchor}
-      className="text-3xl md:text-5xl font-bold linked-heading"
+      className="text-3xl md:text-5xl font-bold linked-heading my-2"
       {...props}
     >
       <a href={link}>

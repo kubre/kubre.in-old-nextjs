@@ -26,14 +26,12 @@ const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
         />
       </Head>
       <MDXProvider components={PostComponents}>
-        <main className="max-w-screen-md mx-auto leading-relaxed" {...rest}>
+        <main className="max-w-screen-lg mx-auto leading-relaxed" {...rest}>
           <div className="px-8">
-            <h1 className="pb-4 pt-8 text-4xl md:text-6xl font-bold">
-              {meta.title}
-            </h1>
-            <div className="text-slate-400 py-2">
-              📝 {meta.published_at.toLocaleDateString()}
-            </div>
+            <PostComponents.h1>{meta.title}</PostComponents.h1>
+            <pre className="text-slate-400 py-2">
+              📅 {meta.published_at.toLocaleDateString()}
+            </pre>
             <div className="py-8">{children}</div>
           </div>
           <div className="pb-8">
