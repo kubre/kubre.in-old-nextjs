@@ -29,7 +29,7 @@ const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
           content={meta.keywords.join(", ")}
           key="keywords"
         />
-        <meta name="og:title" content={meta.title} />
+        <meta property="og:title" content={meta.title} />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css"
