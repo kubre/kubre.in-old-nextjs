@@ -1,9 +1,13 @@
 import Head from "next/head";
 import { MDXProvider } from "@mdx-js/react";
-import Giscus from "@giscus/react";
+import dynamic from "next/dynamic";
 
 import { PostMeta } from "@/types";
 import * as PostComponents from "@/components/PostComponents";
+
+const Comment = dynamic(() => import("./Comment"), {
+  ssr: false,
+});
 
 const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
   meta,
@@ -25,6 +29,7 @@ const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
           content={meta.keywords.join(", ")}
           key="keywords"
         />
+        <meta name="og:title" content={meta.title} />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css"
@@ -43,20 +48,7 @@ const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
             <div className="py-8">{children}</div>
           </div>
           <div className="pb-8">
-            <Giscus
-              id="comments"
-              repo="kubre/kubre.in"
-              repoId="R_kgDOHjf5Dw="
-              category="Announcements"
-              categoryId="DIC_kwDOHjf5D84CP9az"
-              mapping="url"
-              reactionsEnabled="1"
-              emitMetadata="0"
-              inputPosition="top"
-              theme="dark"
-              lang="en"
-              loading="lazy"
-            />
+            <Comment />
           </div>
         </main>
       </MDXProvider>
