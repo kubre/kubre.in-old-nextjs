@@ -12,7 +12,7 @@ const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
   return (
     <>
       <Head>
-        <title>{meta.title} | Vaibhav Kubre&apos;s Blog</title>
+        <title key="title">{meta.title + "  Vaibhav Kubre's Blog"}</title>
         <meta
           name="author"
           content={meta.author ?? "Vaibhav Kubre"}

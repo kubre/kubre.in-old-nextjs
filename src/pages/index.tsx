@@ -41,7 +41,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Vaibhav Kubre</title>
+        <title key="title">Vaibhav Kubre</title>
         <meta
           name="description"
           content="Vaibhav Kubre's personal homepage. Portfolio, blog and more from vaibhav"
