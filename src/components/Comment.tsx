@@ -5,7 +5,7 @@ const Comment = () => {
     <Giscus
       id="comments"
       repo="kubre/kubre.in"
-      repoId="R_kgDOHjf5Dw="
+      repoId="R_kgDOHjf5Dw"
       category="Announcements"
       categoryId="DIC_kwDOHjf5D84CP9az"
       mapping="og:title"
@@ -14,6 +14,7 @@ const Comment = () => {
       inputPosition="top"
       theme="dark"
       lang="en"
+      loading="lazy"
     />
   );
 };
