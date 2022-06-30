@@ -24,6 +24,10 @@ const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
           content={meta.keywords.join(", ")}
           key="keywords"
         />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css"
+        />
       </Head>
       <MDXProvider components={PostComponents}>
         <main className="max-w-screen-lg mx-auto leading-relaxed" {...rest}>

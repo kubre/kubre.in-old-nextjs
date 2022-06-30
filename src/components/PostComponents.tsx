@@ -37,7 +37,7 @@ export const p = (props: any) => (
 );
 
 export const pre = (props: any) => (
-  <pre className="mb-7 leading-relaxed text-lg rounded-lg border border-zinc-500 bg-zinc-900 p-8 font-normal">
+  <pre className="mb-7 leading-relaxed text-lg font-normal border border-zinc-700 rounded-lg bg-zinc-900 py-4 px-8 overflow-y-auto">
     {props.children}
   </pre>
 );

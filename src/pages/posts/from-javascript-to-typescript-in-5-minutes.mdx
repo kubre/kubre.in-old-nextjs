@@ -22,8 +22,7 @@ _That's it?_
 **Yes!** You're done<sup>*</sup>. Ok we do have some other stuff to follow up we are not exactly a typescript developer now. Let's go with example to exactly understand what I'm talking about.
 
 Here's an example with javascript. The `getPosts()` returns all posts and if provided a category returns filtered posts by category.
-```js
-/* demo.js  */
+~~~js
 const allPosts = [
   { title: "Post One", category: "one" },
   { title: "Post Two", category: "two" },
@@ -38,7 +37,7 @@ function getPosts(category) {
 
 console.log("All:", getPosts());
 console.log("Filtered:", getPosts("one"));
-```
+~~~
 
 ```bash
 # Output
@@ -51,7 +50,7 @@ Works as expected.
 
 Now let's get started with a typescript example. Beacuse typescript doesn't run on browser. Let's initialize a typescript 
 
-```sh
+```bash
 # Install typescript
 > npm install typescript --save-dev
 
