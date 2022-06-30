@@ -21,7 +21,7 @@ export const h2 = (props: any) => {
   return (
     <h2
       id={anchor}
-      className="text-3xl md:text-5xl font-bold linked-heading my-2"
+      className="text-3xl font-bold linked-heading mt-7 mb-4"
       {...props}
     >
       <a href={link}>
@@ -33,11 +33,13 @@ export const h2 = (props: any) => {
 };
 
 export const p = (props: any) => (
-  <p className="my-2 leading-relaxed text-lg">{props.children}</p>
+  <p className="mb-7 leading-relaxed text-lg font-serif">{props.children}</p>
 );
 
 export const pre = (props: any) => (
-  <pre className="my-2 leading-relaxed text-lg">{props.children}</pre>
+  <pre className="mb-7 leading-relaxed text-lg rounded-lg border border-zinc-500 bg-zinc-900 p-8 font-normal">
+    {props.children}
+  </pre>
 );
 
 export const code = (props: any) => (
