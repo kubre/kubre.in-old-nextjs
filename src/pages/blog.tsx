@@ -1,12 +1,10 @@
 import fs from "fs";
 import { promisify } from "util";
 import { NextPage } from "next";
-import Image from "next/image";
 
 import Head from "next/head";
 import Vaibhav from "@/components/Vaibhav";
 import SocialMedia from "@/components/SocialMedia";
-import Link from "next/link";
 import React from "react";
 import Post, { PostProps } from "@/components/Post";
 

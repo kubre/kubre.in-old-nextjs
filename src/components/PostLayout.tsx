@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { MDXProvider } from "@mdx-js/react";
+import Giscus from "@giscus/react";
 
 import { PostMeta } from "@/types";
 import * as PostComponents from "@/components/PostComponents";
@@ -30,8 +31,11 @@ const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
         />
       </Head>
       <MDXProvider components={PostComponents}>
-        <main className="max-w-screen-lg mx-auto leading-relaxed" {...rest}>
-          <div className="px-8">
+        <main
+          className="max-w-screen-lg mx-auto leading-relaxed px-8"
+          {...rest}
+        >
+          <div>
             <PostComponents.h1>{meta.title}</PostComponents.h1>
             <pre className="text-slate-400 py-2">
               📅 {meta.published_at.toLocaleDateString()}
@@ -39,7 +43,20 @@ const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
             <div className="py-8">{children}</div>
           </div>
           <div className="pb-8">
-            <span></span>
+            <Giscus
+              id="comments"
+              repo="kubre/kubre.in"
+              repoId="R_kgDOHjf5Dw="
+              category="Announcements"
+              categoryId="DIC_kwDOHjf5D84CP9az"
+              mapping="url"
+              reactionsEnabled="1"
+              emitMetadata="0"
+              inputPosition="top"
+              theme="dark"
+              lang="en"
+              loading="lazy"
+            />
           </div>
         </main>
       </MDXProvider>
