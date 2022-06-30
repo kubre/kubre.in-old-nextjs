@@ -4,10 +4,11 @@ import dynamic from "next/dynamic";
 
 import { PostMeta } from "@/types";
 import * as PostComponents from "@/components/PostComponents";
+import Comment from "@/components/Comment";
 
-const Comment = dynamic(() => import("./Comment"), {
-  ssr: false,
-});
+// const Comment = dynamic(() => import("./Comment"), {
+//   ssr: false,
+// });
 
 const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
   meta,
