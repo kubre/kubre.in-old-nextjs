@@ -1,14 +1,9 @@
-import Head from "next/head";
 import { MDXProvider } from "@mdx-js/react";
-import dynamic from "next/dynamic";
+import Head from "next/head";
 
-import { PostMeta } from "@/types";
-import * as PostComponents from "@/components/PostComponents";
 import Comment from "@/components/Comment";
-
-// const Comment = dynamic(() => import("./Comment"), {
-//   ssr: false,
-// });
+import * as PostComponents from "@/components/PostComponents";
+import { PostMeta } from "@/types";
 
 const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
   meta,
@@ -31,10 +26,6 @@ const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
           key="keywords"
         />
         <meta property="og:title" content={meta.title} />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css"
-        />
       </Head>
       <MDXProvider components={PostComponents}>
         <main
@@ -44,7 +35,7 @@ const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
           <div>
             <PostComponents.h1>{meta.title}</PostComponents.h1>
             <pre className="text-slate-400 py-2">
-              📅 {meta.published_at.toLocaleDateString()}
+              📅 {new Date(meta.publishedAt).toLocaleDateString()}
             </pre>
             <div className="py-8">{children}</div>
           </div>

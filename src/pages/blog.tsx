@@ -1,15 +1,14 @@
-import fs from "fs";
-import { promisify } from "util";
 import { NextPage } from "next";
-
 import Head from "next/head";
-import Vaibhav from "@/components/Vaibhav";
+
+import Post from "@/components/Post";
 import SocialMedia from "@/components/SocialMedia";
-import React from "react";
-import Post, { PostProps } from "@/components/Post";
+import Vaibhav from "@/components/Vaibhav";
+import { getListOfPostMeta } from "@/lib/blog";
+import { PostMeta } from "@/types";
 
 interface BlogProps {
-  posts: Array<PostProps>;
+  posts: PostMeta[];
 }
 
 const Blog: NextPage<BlogProps> = ({ posts }) => {
@@ -39,17 +38,7 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
 };
 
 export async function getStaticProps() {
-  const readDir = promisify(fs.readdir);
-  const postFiles = await readDir("./src/pages/posts");
-  const posts = postFiles.map((file) => {
-    const name = file.replace(".mdx", "");
-    console.log(typeof name);
-    return {
-      title: name.replace(/-/g, " "),
-      image: `/images/${name}.png`,
-      slug: name,
-    };
-  });
+  const posts = await getListOfPostMeta();
 
   return {
     props: { posts },

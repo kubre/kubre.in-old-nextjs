@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Roboto&family=Roboto+Serif:ital,opsz,wght@0,8..144,400;0,8..144,700;1,8..144,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Roboto&family=Roboto+Serif:ital,opsz,wght@0,8..144,400;0,8..144,700;1,8..144,400&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: 'JetBrains Mono', monospace;
-  font-family: 'Roboto Serif', serif;
-  font-family: 'Roboto', sans-serif;
+  font-family: "JetBrains Mono", monospace;
+  font-family: "Roboto Serif", serif;
+  font-family: "Roboto", sans-serif;
   @apply bg-slate-900 text-slate-50;
 }
 

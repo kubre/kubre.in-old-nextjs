@@ -1,6 +1,13 @@
 import PostLayout from "@/components/PostLayout";
 import { PostMeta } from "@/types";
 
+export const meta = {
+  title: "Learn Javascript Write Typescript",
+  description: "",
+  publishedAt: new Date("27 Jun 2022").toISOString(),
+  keywords: ["javascript", "typescript", "leanring"]
+}
+
 <div className="py-8">
 ![Image for JavaScript to TypeScript](/images/from-javascript-to-typescript-in-5-minutes.png)
 </div>
@@ -65,9 +72,4 @@ This works fine, but we want typescript. Let's rename file to `demo.ts`. If
 
 So let's say you've file with above function
 
-export default ({ children }) => <PostLayout meta={{
-  title: "⏰ From Javascript to Typescript in 5 minutes",
-  description: "",
-  published_at: new Date("27 Jun 2022"),
-  keywords: ["javascript", "typescript", "leanring"]
-}}>{children}</PostLayout>;
+export default ({ children }) => <PostLayout meta={meta}>{children}</PostLayout>;
