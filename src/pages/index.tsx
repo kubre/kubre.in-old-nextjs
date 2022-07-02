@@ -25,7 +25,7 @@ const Home: NextPage = () => {
       <h2 className="font-bold text-xl">⌨ Freelancer</h2>
       <p className="text-sm mt-1">(Jun 2017 - Dec 2021)</p>
       <p className="pl-4 mt-2 text-slate-300">
-        Worked as Freelnacer making websites and mobile apps, alongside being a
+        Worked as Freelancer making websites and mobile apps, alongside being a
         CS Student. Checkout the websites I worked on{" "}
         <OutLink href="https://www.taxglobe.in" title="TaxGlobe.in" />,{" "}
         <OutLink href="https://www.gatearch.in" title="GateArch.in" />,{" "}
