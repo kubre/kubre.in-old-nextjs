@@ -4,6 +4,7 @@ import Head from "next/head";
 import Comment from "@/components/Comment";
 import * as PostComponents from "@/components/PostComponents";
 import { PostMeta } from "@/types";
+import Image from "next/image";
 
 const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
   meta,
@@ -39,6 +40,13 @@ const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
                 📅 {new Date(meta.publishedAt).toLocaleDateString()}
               </pre>
             </div>
+            <Image
+              src={meta.image ?? ""}
+              alt={meta.title}
+              width={768}
+              height={220}
+              layout="responsive"
+            />
             <div className="py-8">{children}</div>
           </div>
           <div className="pb-8">
