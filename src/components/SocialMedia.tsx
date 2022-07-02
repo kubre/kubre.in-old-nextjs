@@ -1,6 +1,6 @@
 const SocialMedia = () => {
   return (
-    <div className="flex justify-around px-16 max-w-md mx-auto md:px-24 mt-4 md:mt-8">
+    <div className="flex justify-around px-16 w-full max-w-md mx-auto md:px-24 mt-4 md:mt-8">
       <a
         target="_blank"
         rel="noreferrer"

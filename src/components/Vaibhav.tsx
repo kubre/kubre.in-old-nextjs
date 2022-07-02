@@ -13,8 +13,6 @@ const Vaibhav = () => {
           alt="My avatar picture"
         />
       </div>
-      <h1 className="text-2xl font-bold mt-4">Vaibhav Kubre</h1>
-      <h2>(Fullstack Engineer)</h2>
     </div>
   );
 };

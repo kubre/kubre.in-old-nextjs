@@ -11,7 +11,7 @@ export const img = (props: any) => (
 );
 
 export const h1 = (props: any) => (
-  <h1 className="text-5xl font-bold py-2">{props.children}</h1>
+  <h1 className="text-4xl font-bold py-2">{props.children}</h1>
 );
 
 export const h2 = (props: any) => {

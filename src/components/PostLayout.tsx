@@ -33,10 +33,12 @@ const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
           {...rest}
         >
           <div>
-            <PostComponents.h1>{meta.title}</PostComponents.h1>
-            <pre className="text-slate-400 py-2">
-              📅 {new Date(meta.publishedAt).toLocaleDateString()}
-            </pre>
+            <div className="py-8">
+              <PostComponents.h1 className>{meta.title}</PostComponents.h1>
+              <pre className="text-slate-400 py-2">
+                📅 {new Date(meta.publishedAt).toLocaleDateString()}
+              </pre>
+            </div>
             <div className="py-8">{children}</div>
           </div>
           <div className="pb-8">

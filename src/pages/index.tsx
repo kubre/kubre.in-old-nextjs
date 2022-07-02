@@ -49,8 +49,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="block md:grid md:grid-cols-2 pb-8 pt-0 md:pt-8">
-        <div>
+      <main className="block md:grid md:grid-cols-2 pb-8 pt-0 md:pt-8 h-auto md:h-[600px]">
+        <div className="flex justify-center flex-col">
           <Vaibhav />
           <SocialMedia />
         </div>
