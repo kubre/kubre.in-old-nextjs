@@ -28,6 +28,12 @@ export async function generateFeed() {
     },
   });
 
+  feed.addItem({
+    title: "Blog",
+    date: date,
+    link: `${siteURL}/blog`,
+  });
+
   const posts = await getListOfPostMeta();
   for (const post of posts) {
     const url = `${siteURL}/posts/${post.slug}`;
