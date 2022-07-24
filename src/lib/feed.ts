@@ -1,7 +1,7 @@
 import { Feed } from "feed";
 import { getListOfPostMeta } from "./blog";
 
-const siteURL = process.env.VERCEL_URL ?? "https//kubre.in";
+const siteURL = "https//kubre.in";
 const date = new Date();
 const me = {
   name: "Vaibhav Kubre",
