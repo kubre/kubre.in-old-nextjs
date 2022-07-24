@@ -110,8 +110,8 @@ export async function getStaticProps() {
   const feed = await generateFeed();
   console.log(feed.rss2());
   console.log(feed.json1());
-  writeFileSync("./public/feed.json", feed.json1());
-  writeFileSync("./public/feed.xml", feed.rss2());
+  // writeFileSync("./public/feed.json", feed.json1());
+  // writeFileSync("./public/feed.xml", feed.rss2());
   console.log("== Generated feed ==");
   return { props: {} };
 }
