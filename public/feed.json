@@ -1,0 +1,23 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Vaibhav Kubre",
+    "home_page_url": "http://localhost:3000",
+    "feed_url": "http://localhost:3000}/feed.json",
+    "description": "Vaibhav Kubre's portfolio and blog",
+    "icon": "http://localhost:3000/images/me.jpg",
+    "items": [
+        {
+            "id": "http://localhost:3000/posts/learn-javascript-and-use-typescript",
+            "content_html": "How to start using typescript in your projects without getting overwhelmed by all of the features it has to offer.",
+            "url": "http://localhost:3000/posts/learn-javascript-and-use-typescript",
+            "title": "Learn JavaScript and use Typescript",
+            "summary": "How to start using typescript in your projects without getting overwhelmed by all of the features it has to offer.",
+            "image": "http://localhost:3000/images/learn-javascript-and-use-typescript.jpg",
+            "date_modified": "2022-07-02T18:30:00.000Z",
+            "author": {
+                "name": "Vaibhav Kubre",
+                "url": "https://github.com/kubre"
+            }
+        }
+    ]
+}

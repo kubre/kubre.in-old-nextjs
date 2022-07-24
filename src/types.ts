@@ -1,5 +1,9 @@
 export interface PostMeta {
-  author?: string;
+  author?: {
+    name: string;
+    email: string;
+    link: string;
+  };
   description: string;
   title: string;
   slug?: string;

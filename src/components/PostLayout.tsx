@@ -18,7 +18,7 @@ const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
         <meta name="description" content={meta.description} key="description" />
         <meta
           name="author"
-          content={meta.author ?? "Vaibhav Kubre"}
+          content={meta.author?.name ?? "Vaibhav Kubre"}
           key="author"
         />
 
