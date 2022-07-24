@@ -23,3 +23,15 @@ body {
 .linked-heading:hover .linked-heading-icon {
   @apply inline;
 }
+
+::-webkit-scrollbar {
+  @apply w-1;
+}
+ 
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+ 
+::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 rounded-lg;
+}

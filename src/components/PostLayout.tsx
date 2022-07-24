@@ -5,12 +5,17 @@ import Comment from "@/components/Comment";
 import * as PostComponents from "@/components/PostComponents";
 import { PostMeta } from "@/types";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 
 const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
   meta,
   children,
   ...rest
 }) => {
+  const CommentDynamic = dynamic(() => import("@/components/Comment"), {
+    ssr: false,
+  });
+
   return (
     <>
       <Head>
@@ -64,7 +69,7 @@ const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
             <div className="py-8">{children}</div>
           </div>
           <div className="pb-8">
-            <Comment />
+            <CommentDynamic />
           </div>
         </main>
       </MDXProvider>
