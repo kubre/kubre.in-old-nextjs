@@ -5,8 +5,8 @@ export const meta = {
   title: "Learn JavaScript and use Typescript",
   description: "How to start using typescript in your projects without getting overwhelmed by all of the features it has to offer.",
   image: "/images/learn-javascript-and-use-typescript.jpg",
-  publishedAt: new Date("03 July 2022").toISOString(),
-  tags: ["javascript", "typescript", "leanrn typescript"],
+  publishedAt: "3 July 2022",
+  tags: ["javascript", "typescript", "learn typescript"],
 }
 
 ## Experience
@@ -19,7 +19,7 @@ You're comfortable with javascript now. You've finally been able to learn the fa
 
 **Learn javascript and use typescript**, Yes the title of this blog post. What does it even mean? Just write JavaScript inside the typescript file.
 
-*That's it!*
+_That's it!_
 
 Let's understand with an example.
 
@@ -31,10 +31,7 @@ const allPosts = [
 
 function getPosts(category) {
   if (category) {
-    return allPosts
-    .filter((post) =>
-      post.category === category
-    );
+    return allPosts.filter((post) => post.category === category);
   }
   return allPosts;
 }
@@ -63,4 +60,6 @@ If you go deep, you will find it interesting to learn but difficult to maintain 
 
 I had a hard time starting with typescript at first, but now I've switched over to full-time. by simply only adding in types when typescript complains about it. And every other time, I just let typescript infer the type for me. This is called implicit typing, and it helps a lot to reduce the amount of code that doesn't add any features for the users. This also keeps you from getting strictly locked into the typescript itself. At work, I still have to use JavaScript, and it won't go anywhere soon. Javascript is improving day by day and people will keep using it. Some are moving back to Javascript from Typescript also.
 
-export default ({ children }) => <PostLayout meta={meta}>{children}</PostLayout>;
+export default ({ children }) => (
+  <PostLayout meta={meta}>{children}</PostLayout>
+);

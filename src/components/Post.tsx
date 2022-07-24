@@ -17,9 +17,7 @@ const Post: React.FC<{ post: PostMeta }> = ({ post }) => {
           />
           <div className="flex flex-col gap-y-2">
             <h1 className="text-2xl font-bold capitalize">{post.title}</h1>
-            <span className="text-slate-400">
-              📅 {new Date(post.publishedAt).toLocaleDateString()}
-            </span>
+            <span className="text-slate-400">📅 {post.publishedAt}</span>
           </div>
         </div>
       </a>

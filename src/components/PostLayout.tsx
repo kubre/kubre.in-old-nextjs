@@ -51,9 +51,7 @@ const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
           <div>
             <div className="py-8">
               <PostComponents.h1 className>{meta.title}</PostComponents.h1>
-              <pre className="text-slate-400 py-2">
-                📅 {new Date(meta.publishedAt).toLocaleDateString()}
-              </pre>
+              <pre className="text-slate-400 py-2">📅 {meta.publishedAt}</pre>
             </div>
             <Image
               src={meta.image ?? ""}

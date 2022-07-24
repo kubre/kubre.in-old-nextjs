@@ -11,7 +11,6 @@ export async function getListOfPostMeta() {
       const _post = post.replace(".mdx", "");
       const meta: PostMeta = {
         ...page.meta,
-        // image: `/images/${_post}.jpg`,
         slug: `${_post}`,
       };
       listOfPostMeta.push(meta);
