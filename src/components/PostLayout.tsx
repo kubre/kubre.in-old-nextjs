@@ -21,11 +21,7 @@ const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
           key="author"
         />
         <meta name="description" content={meta.description} key="description" />
-        <meta
-          name="keywords"
-          content={meta.keywords.join(", ")}
-          key="keywords"
-        />
+        <meta name="keywords" content={meta.tags.join(", ")} key="keywords" />
         <meta property="og:title" content={meta.title} />
       </Head>
       <MDXProvider components={PostComponents}>
@@ -46,6 +42,7 @@ const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
               width={768}
               height={220}
               layout="responsive"
+              className="invert"
             />
             <div className="py-8">{children}</div>
           </div>

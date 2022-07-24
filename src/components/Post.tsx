@@ -13,6 +13,7 @@ const Post: React.FC<{ post: PostMeta }> = ({ post }) => {
             width={768}
             height={200}
             layout="responsive"
+            className="invert"
           />
           <div className="flex flex-col gap-y-2">
             <h1 className="text-2xl font-bold capitalize">{post.title}</h1>

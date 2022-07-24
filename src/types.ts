@@ -4,7 +4,7 @@ export interface PostMeta {
   title: string;
   slug?: string;
   image?: string;
-  keywords: string[];
+  tags: string[];
   publishedAt: string;
   modifiedAt?: string;
   isPublished: boolean;

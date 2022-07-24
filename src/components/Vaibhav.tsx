@@ -11,6 +11,7 @@ const Vaibhav = () => {
           className="rounded-full invert"
           src="/images/me.jpg"
           alt="My avatar picture"
+          priority={true}
         />
       </div>
     </div>

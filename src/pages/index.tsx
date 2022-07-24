@@ -7,13 +7,13 @@ const Home: NextPage = () => {
   const FullstackDiv = (
     <div>
       <h2 className="font-bold text-xl">
-        👨‍💻 FullStack Engineer at{" "}
+        📚 FullStack Engineer at{" "}
         <a target="_blank" rel="noreferrer" href="https://www.hellotars.com/">
           TARS
         </a>
       </h2>
-      <p className="text-sm mt-1">(Dec 2021 - Present)</p>
-      <p className="pl-4 mt-2 text-slate-300">
+      <p className="text-sm pt-1 pl-4">(Dec 2021 - Present)</p>
+      <p className="pl-4 pt-2 text-slate-300">
         From Dec 2021 working at TARS from chatbot builder to live chat.
         Building new features everyday.
       </p>
@@ -22,15 +22,15 @@ const Home: NextPage = () => {
 
   const FreelancerDiv = (
     <div className="mt-2">
-      <h2 className="font-bold text-xl">⌨ Freelancer</h2>
-      <p className="text-sm mt-1">(Jun 2017 - Dec 2021)</p>
-      <p className="pl-4 mt-2 text-slate-300">
+      <h2 className="font-bold text-xl">⏰ Freelancer</h2>
+      <p className="text-sm pt-1 pl-4">(Jun 2017 - Dec 2021)</p>
+      <p className="pl-4 pt-2 text-slate-300">
         Worked as Freelancer making websites and mobile apps, alongside being a
         CS Student. Checkout the websites I worked on{" "}
-        <OutLink href="https://www.taxglobe.in" title="TaxGlobe.in" />,{" "}
-        <OutLink href="https://www.gatearch.in" title="GateArch.in" />,{" "}
+        <OutLink href="https://taxglobe.in" title="TaxGlobe.in" />,{" "}
+        <OutLink href="https://gatearch.in" title="GateArch.in" />,{" "}
         <OutLink
-          href="https://www.wonderlearning.in/admin"
+          href="https://wonderlearning.in/admin"
           title="Wonder Learning"
         />
         , and more.
@@ -44,9 +44,27 @@ const Home: NextPage = () => {
         <title key="title">Vaibhav Kubre</title>
         <meta
           name="description"
-          content="Vaibhav Kubre's personal homepage. Portfolio, blog and more from vaibhav"
+          content="Vaibhav Kubre's personal homepage. Portfolio, blog, and more from me."
         />
-        <link rel="icon" href="/favicon.ico" />
+
+        <meta property="og:url" content="https://kubre.in" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Vaibhav Kubre" />
+        <meta
+          property="og:description"
+          content="Vaibhav Kubre's personal homepage. Portfolio, blog, and more from me."
+        />
+        <meta property="og:image" content="https://kubre.in/images/me.jpg" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="kubre.in" />
+        <meta property="twitter:url" content="https://kubre.in" />
+        <meta name="twitter:title" content="Vaibhav Kubre" />
+        <meta
+          name="twitter:description"
+          content="Vaibhav Kubre's personal homepage. Portfolio, blog, and more from me."
+        />
+        <meta name="twitter:image" content="https://kubre.in/images/me.jpg" />
       </Head>
 
       <main className="block md:grid md:grid-cols-2 pb-8 pt-4 md:pt-8 h-auto md:h-[600px]">
