@@ -3,9 +3,7 @@ import Head from "next/head";
 import Vaibhav from "@/components/Vaibhav";
 import SocialMedia from "@/components/SocialMedia";
 import { generateFeed } from "@/lib/feed";
-import fs from "fs";
-import { promisify } from "util";
-const writeFile = promisify(fs.writeFile);
+import { writeFileSync } from "fs";
 
 const Home: NextPage = () => {
   const FullstackDiv = (
@@ -110,10 +108,10 @@ const OutLink = ({ href, title }: OutLinkProps) => {
 export async function getStaticProps() {
   console.log("== Generating feed ==");
   const feed = await generateFeed();
-  writeFile("./public/feed.json", feed.json1());
-  writeFile("./public/feed.xml", feed.rss2());
   console.log(feed.rss2());
   console.log(feed.json1());
+  writeFileSync("./public/feed.json", feed.json1());
+  writeFileSync("./public/feed.xml", feed.rss2());
   console.log("== Generated feed ==");
   return { props: {} };
 }
