@@ -29,7 +29,7 @@ const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
         <meta property="og:type" content="website" />
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.description} />
-        <meta property="og:image" content={meta.image} />
+        <meta property="og:image" content={`https://kubre.in/${meta.image}`} />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="kubre.in" />
@@ -39,7 +39,7 @@ const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
         />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:image" content={meta.image} />
+        <meta name="twitter:image" content={`https://kubre.in/${meta.image}`} />
 
         <meta name="keywords" content={meta.tags.join(", ")} key="keywords" />
       </Head>
@@ -54,7 +54,7 @@ const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
               <pre className="text-slate-400 py-2">📅 {meta.publishedAt}</pre>
             </div>
             <Image
-              src={meta.image ?? ""}
+              src={`/${meta.image}` ?? ""}
               alt={meta.title}
               width={768}
               height={220}
