@@ -1,7 +1,7 @@
 import { Feed } from "feed";
 import { getListOfPostMeta } from "./blog";
 
-const siteURL = "https//kubre.in";
+const siteURL = process.env.SITE_URL ?? "https://kubre.in";
 const date = new Date();
 const me = {
   name: "Vaibhav Kubre",
@@ -10,7 +10,7 @@ const me = {
 };
 
 export async function generateFeed() {
-  console.log(process.env.VERCEL_URL);
+  console.log("BASE URL ==>", process.env.SITE_URL);
   const feed = new Feed({
     title: "Vaibhav Kubre",
     description: "Vaibhav Kubre's portfolio and blog",
