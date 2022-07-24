@@ -108,10 +108,8 @@ const OutLink = ({ href, title }: OutLinkProps) => {
 export async function getStaticProps() {
   console.log("== Generating feed ==");
   const feed = await generateFeed();
-  console.log(feed.rss2());
-  console.log(feed.json1());
-  // writeFileSync("./public/feed.json", feed.json1());
-  // writeFileSync("./public/feed.xml", feed.rss2());
-  console.log("== Generated feed ==");
+  writeFileSync("./public/feed.json", feed.json1());
+  writeFileSync("./public/feed.xml", feed.rss2());
+  console.log("== FEED WRITE DONE ==");
   return { props: {} };
 }
