@@ -14,15 +14,34 @@ const PostLayout: React.FC<{ meta: PostMeta; children?: any }> = ({
   return (
     <>
       <Head>
-        <title key="title">{meta.title + "  Vaibhav Kubre's Blog"}</title>
+        <title key="title">{meta.title}</title>
+        <meta name="description" content={meta.description} key="description" />
         <meta
           name="author"
           content={meta.author ?? "Vaibhav Kubre"}
           key="author"
         />
-        <meta name="description" content={meta.description} key="description" />
-        <meta name="keywords" content={meta.tags.join(", ")} key="keywords" />
+
+        <meta
+          property="og:url"
+          content={`https://kubre.in/posts/${meta.slug}`}
+        />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content={meta.title} />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:image" content={meta.image} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="kubre.in" />
+        <meta
+          property="twitter:url"
+          content={`https://kubre.in/posts/${meta.slug}`}
+        />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
+        <meta name="twitter:image" content={meta.image} />
+
+        <meta name="keywords" content={meta.tags.join(", ")} key="keywords" />
       </Head>
       <MDXProvider components={PostComponents}>
         <main
