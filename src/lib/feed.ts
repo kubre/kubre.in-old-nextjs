@@ -10,6 +10,7 @@ const me = {
 };
 
 export async function generateFeed() {
+  console.log(process.env.VERCEL_URL);
   const feed = new Feed({
     title: "Vaibhav Kubre",
     description: "Vaibhav Kubre's portfolio and blog",
