@@ -29,6 +29,12 @@ export async function generateFeed() {
   });
 
   feed.addItem({
+    title: "Home",
+    date: date,
+    link: `${siteURL}/`,
+  });
+
+  feed.addItem({
     title: "Blog",
     date: date,
     link: `${siteURL}/blog`,
