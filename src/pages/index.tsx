@@ -5,16 +5,17 @@ import SocialMedia from "@/components/SocialMedia";
 import { generateFeed } from "@/lib/feed";
 import { writeFileSync } from "fs";
 
-const Home: NextPage = () => {
+const Home: NextPage<{ env: string | undefined | null }> = ({ env }) => {
+  console.log("====>", { env });
   const FullstackDiv = (
     <div>
-      <h2 className="font-bold text-xl">
+      <h2 className="text-xl font-bold">
         📚 FullStack Engineer at{" "}
         <a target="_blank" rel="noreferrer" href="https://www.hellotars.com/">
           TARS
         </a>
       </h2>
-      <p className="text-sm pt-1 pl-4">(Dec 2021 - Present)</p>
+      <p className="pt-1 pl-4 text-sm">(Dec 2021 - Present)</p>
       <p className="pl-4 pt-2 text-slate-300">
         From Dec 2021 working at TARS from chatbot builder to live chat.
         Building new features everyday.
@@ -24,8 +25,8 @@ const Home: NextPage = () => {
 
   const FreelancerDiv = (
     <div className="mt-2">
-      <h2 className="font-bold text-xl">⏰ Freelancer</h2>
-      <p className="text-sm pt-1 pl-4">(Jun 2017 - Dec 2021)</p>
+      <h2 className="text-xl font-bold">⏰ Freelancer</h2>
+      <p className="pt-1 pl-4 text-sm">(Jun 2017 - Dec 2021)</p>
       <p className="pl-4 pt-2 text-slate-300">
         Worked as Freelancer making websites and mobile apps, alongside being a
         CS Student. Checkout the websites I worked on{" "}
@@ -69,12 +70,12 @@ const Home: NextPage = () => {
         <meta name="twitter:image" content="https://kubre.in/images/me.jpg" />
       </Head>
 
-      <main className="block md:grid md:grid-cols-2 pb-8 pt-4 md:pt-8 h-auto md:h-[600px]">
-        <div className="flex justify-center flex-col">
+      <main className="block h-auto pb-8 pt-4 md:grid md:h-[600px] md:grid-cols-2 md:pt-8">
+        <div className="flex flex-col justify-center">
           <Vaibhav />
           <SocialMedia />
         </div>
-        <div className="pt-8 max-w-md flex justify-center items-center">
+        <div className="flex max-w-md items-center justify-center pt-8">
           <div className="grid gap-y-4 px-8">
             {FullstackDiv}
             {FreelancerDiv}
@@ -98,7 +99,7 @@ const OutLink = ({ href, title }: OutLinkProps) => {
       target="_blank"
       rel="noreferrer"
       href={href}
-      className="text-sky-500 hover:bg-sky-500 hover:text-white transition"
+      className="text-sky-500 transition hover:bg-sky-500 hover:text-white"
     >
       {title}
     </a>
@@ -111,5 +112,6 @@ export async function getStaticProps() {
   writeFileSync("./public/feed.json", feed.json1());
   writeFileSync("./public/feed.xml", feed.rss2());
   console.log("== FEED WRITE DONE ==");
-  return { props: {} };
+  const env = process.env.NODE_ENV;
+  return { props: { env } };
 }
